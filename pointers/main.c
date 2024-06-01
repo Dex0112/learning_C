@@ -3,12 +3,12 @@
 int main() {
     int a = 5;
 
-    int * pointer_to_a = &a;
+    int *a_ptr = &a;
 
     a++;
 
     printf("a: %d\n", a);
-    printf("a pointer: %d\n", *pointer_to_a);
+    printf("a pointer: %d\n", *a_ptr);
 
     int b = 3;
 
