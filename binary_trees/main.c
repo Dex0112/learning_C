@@ -26,6 +26,8 @@ int main() {
     printf("\n");
 
     cleanTree(tree);
+
+    return 0;
 }
 
 void cleanTree(node_t *current) {
