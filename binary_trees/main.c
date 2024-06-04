@@ -8,7 +8,6 @@ typedef struct node {
 } node_t;
 
 void insert(node_t *tree, int val);
-void printBFS(node_t *current);
 void printDFS(node_t *current);
 
 int main() {
