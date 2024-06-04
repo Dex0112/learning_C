@@ -9,6 +9,7 @@ typedef struct node {
 
 void insert(node_t *tree, int val);
 void printDFS(node_t *current);
+void cleanTree(node_t *curren);
 
 int main() {
     node_t *tree = (node_t *)malloc(sizeof(node_t));
@@ -23,6 +24,18 @@ int main() {
 
     printDFS(tree);
     printf("\n");
+
+    cleanTree(tree);
+}
+
+void cleanTree(node_t *current) {
+    if (current->left)
+        cleanTree(current->left);
+
+    if (current->right)
+        cleanTree(current->right);
+
+    free(current);
 }
 
 void insert(node_t *current, int val) {
