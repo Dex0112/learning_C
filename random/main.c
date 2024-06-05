@@ -15,7 +15,16 @@ int main() {
     scanf("%d", &choice);
 
     if (choice == 2) {
-        testRandomDistrobution(0, 10, 100);
+
+        unsigned int min;
+        unsigned int max;
+        unsigned int sampleSize;
+
+        printf("Min Max SampleSize: ");
+        scanf("%d %d %d", &min, &max, &sampleSize);
+
+        testRandomDistrobution(min, max, sampleSize);
+
         return 0;
     }
 
@@ -81,7 +90,7 @@ void testRandomDistrobution(unsigned int min, unsigned int max,
 
         totalPercent += distrobution;
 
-        printf("%d: %.2f%%\n", num, distrobution * 100.0);
+        printf("%d (%d): %.2f%%\n", num, occurances[i], distrobution * 100.0);
     }
 
     printf("Percent Total %.2f%%\n", totalPercent * 100.0);
