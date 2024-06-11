@@ -15,7 +15,6 @@ int main() {
     scanf("%d", &choice);
 
     if (choice == 2) {
-
         unsigned int min;
         unsigned int max;
         unsigned int sampleSize;
